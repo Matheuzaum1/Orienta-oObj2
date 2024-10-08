@@ -1,7 +1,6 @@
 package Aula03.Ex1;
 
 public class Endereco {
-
     private String logradouro;
     private int numero;
     private String bairro;
@@ -45,4 +44,4 @@ public class Endereco {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-}
+}   

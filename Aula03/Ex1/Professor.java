@@ -1,40 +1,31 @@
 package Aula03.Ex1;
 
 public class Professor extends Pessoa {
-    private Double SalarioBase;
-    private Double SalarioTitulacao;
+    private Double salarioBase;
+    private Double salarioTitulacao;
 
-    public Professor(String nome, String idade, Double salarioBase, Double salarioTitulacao) {
-        super(nome, idade);
-        SalarioBase = salarioBase;
-        SalarioTitulacao = salarioTitulacao;
+    public Professor(String nome, int idade, Endereco end, Double salarioBase, Double salarioTitulacao) {
+        super(nome, idade, end);
+        this.salarioBase = salarioBase;
+        this.salarioTitulacao = salarioTitulacao;
     }
     public Double getSalarioBase() {
-        return SalarioBase;
+        return salarioBase;
     }
     public void setSalarioBase(Double salarioBase) {
-        SalarioBase = salarioBase;
+        this.salarioBase = salarioBase;
     }
     public Double getSalarioTitulacao() {
-        return SalarioTitulacao;
+        return salarioTitulacao;
     }
     public void setSalarioTitulacao(Double salarioTitulacao) {
-        SalarioTitulacao = salarioTitulacao;
+        this.salarioTitulacao = salarioTitulacao;
     }
 
-
-    public Double calcularSalario() {
-        return SalarioBase + SalarioTitulacao;
+    public void imprimirDados() {
+        super.imprimirDados();
+        System.out.println("Salário base: " + this.salarioBase);
+        System.out.println("Salário titulação: " + this.salarioTitulacao);
     }
-
-    public void ImprimirDados(){
-        System.out.println("Nome: " + getNome());
-        System.out.println("Idade: " + getIdade());
-        System.out.println("Salario Base: " + getSalarioBase());
-        System.out.println("Salario Titulacao: " + getSalarioTitulacao());
-        System.out.println("Salario: " + calcularSalario());
-    }
-
-
 
 }
