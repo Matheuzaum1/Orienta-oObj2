@@ -4,6 +4,7 @@ public class pessoa {
     private String sexo;
     private String email;
     private String estadoCivil;
+    @SuppressWarnings("FieldMayBeFinal")
     private endereco endereco;
 
   

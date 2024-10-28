@@ -5,6 +5,7 @@ public class App {
         try {
             System.out.println("mensagem antes da exceção");
             int resultado = 10 / 0;
+            System.out.println("O resultado é: " + resultado);
             System.out.println("Mensagem depois da exceção");   
         } catch (Exception e) {
             System.out.println((e.getMessage()));
